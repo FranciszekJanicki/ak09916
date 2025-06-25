@@ -9,8 +9,9 @@ typedef struct {
     ak09916_interface_t interface;
 } ak09916_t;
 
-ak09916_err_t
-ak09916_initialize(ak09916_t* ak09916, ak09916_config_t const* config, ak09916_interface_t const* interface);
+ak09916_err_t ak09916_initialize(ak09916_t* ak09916,
+                                 ak09916_config_t const* config,
+                                 ak09916_interface_t const* interface);
 ak09916_err_t ak09916_deinitialize(ak09916_t* ak09916);
 
 ak09916_err_t ak09916_get_mag_data_x_scaled(ak09916_t const* ak09916, float32_t* scaled);
@@ -37,9 +38,11 @@ ak09916_err_t ak09916_get_out_reg(ak09916_t const* ak09916, ak09916_out_reg_t* r
 ak09916_err_t ak09916_get_status_2_reg(ak09916_t const* ak09916, ak09916_status_2_reg_t* reg);
 
 ak09916_err_t ak09916_get_control_2_reg(ak09916_t const* ak09916, ak09916_control_2_reg_t* reg);
-ak09916_err_t ak09916_set_control_2_reg(ak09916_t const* ak09916, ak09916_control_2_reg_t const* reg);
+ak09916_err_t ak09916_set_control_2_reg(ak09916_t const* ak09916,
+                                        ak09916_control_2_reg_t const* reg);
 
 ak09916_err_t ak09916_get_control_3_reg(ak09916_t const* ak09916, ak09916_control_3_reg_t* reg);
-ak09916_err_t ak09916_set_control_3_reg(ak09916_t const* ak09916, ak09916_control_3_reg_t const* reg);
+ak09916_err_t ak09916_set_control_3_reg(ak09916_t const* ak09916,
+                                        ak09916_control_3_reg_t const* reg);
 
 #endif // AK09916_AK09916_H
