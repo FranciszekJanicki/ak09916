@@ -4,10 +4,8 @@ target_sources(ak09916 PRIVATE
     "ak09916.c"
 )
 
-target_include_directories(ak09916 PUBLIC 
-)
-
-target_link_libraries(ak09916 PRIVATE
+target_include_directories(ak09916 PUBLIC
+    ${CMAKE_CURRENT_SOURCE_DIR}
 )
 
 target_compile_options(ak09916 PUBLIC
