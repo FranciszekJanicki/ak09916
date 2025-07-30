@@ -3,7 +3,11 @@
 
 #include <stdint.h>
 
-typedef struct WHO_AM_I_1 {
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef struct {
     uint8_t wia1 : 8;
 } ak09916_who_am_i_1_reg_t;
 
@@ -45,5 +49,9 @@ typedef struct {
 typedef struct {
     uint8_t srst : 1;
 } ak09916_control_3_reg_t;
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif // AK09916_AK09916_REGISTERS_H

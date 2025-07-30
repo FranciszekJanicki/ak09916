@@ -4,6 +4,10 @@
 #include "ak09916_config.h"
 #include "ak09916_registers.h"
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 typedef struct {
     ak09916_config_t config;
     ak09916_interface_t interface;
@@ -62,5 +66,9 @@ ak09916_err_t ak09916_get_control_3_reg(ak09916_t const* ak09916,
                                         ak09916_control_3_reg_t* reg);
 ak09916_err_t ak09916_set_control_3_reg(ak09916_t const* ak09916,
                                         ak09916_control_3_reg_t const* reg);
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif // AK09916_AK09916_H

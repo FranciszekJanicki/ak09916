@@ -4,6 +4,10 @@
 #include <stddef.h>
 #include <stdint.h>
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 #define AK09916_SLAVE_ADDRESS 0b0001100
 #define AK09916_COMPANY_ID 0b01001000
 #define AK09916_DEVICE_ID 0b00001001
@@ -69,5 +73,9 @@ typedef struct {
     ak09916_err_t (*bus_write_data)(void*, uint8_t, uint8_t const*, size_t);
     ak09916_err_t (*bus_read_data)(void*, uint8_t, uint8_t*, size_t);
 } ak09916_interface_t;
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif // AK09916_AK09916_CONFIG_H
